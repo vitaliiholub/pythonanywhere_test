@@ -3,7 +3,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemo
 
 from config import TOKEN_API
 
-bot = Bot(TOKEN_API)
+proxy_url = 'http://proxy.server:3128'
+bot = Bot(token=TOKEN_API, proxy=proxy_url)
 dp = Dispatcher(bot)
 
 kb = ReplyKeyboardMarkup(resize_keyboard=True)
